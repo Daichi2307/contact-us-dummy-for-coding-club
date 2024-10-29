@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="breadcrumb">
+        <a href="#">Home</a> &gt; <a href="#" class="active">Contact Us</a>
+    </div>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Please post CODING-related questions in our <a href="#">community forum</a> where seniors are eager to help.</p>
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <label for="name">Your Name <span class="required">REQUIRED</span></label>
+            <input type="text" id="name" name="name" required placeholder="Your Name *">
+
+            <label for="email">Email Address <span class="required">REQUIRED</span></label>
+            <input type="email" id="email" name="email" required placeholder="Email Address *">
+
+            <label for="reason">Reason for Contact</label>
+            <input type="text" id="reason" name="reason" placeholder="Club GreenSock">
+
+            <label for="message">Your Message <span class="required">REQUIRED</span></label>
+            <div class="rich-text-editor">
+                <div class="toolbar">
+                    <button type="button" onclick="formatText('bold')"><b>B</b></button>
+                    <button type="button" onclick="formatText('italic')"><i>I</i></button>
+                    <button type="button" onclick="formatText('underline')"><u>U</u></button>
+          
+                </div>
+                <div id="message" class="editor" contenteditable="true" placeholder="Your Message *"></div>
+                <button type="button" onclick="insertImage()" class="insert-image-button">Insert image from URL</button>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+ </div>
+    <script src="function.js"></script>
+</body>
+</html>
